@@ -5,12 +5,12 @@
 */
 
 /// Big O: three simple operation regardless of the size of n.
-/// Time Complexity: Constant
+/// Time Complexity: Constant - O(1)
 pub fn add_up_simplfied(number: u32) -> u32 {
     number * (number + 1) / 2
 }
 
-/// Time Complexity: Linear
+/// Time Complexity: Linear  - O(n)
 pub fn add_up_to(number: i32) -> i32 {
     let mut total = 0;
 
@@ -21,7 +21,7 @@ pub fn add_up_to(number: i32) -> i32 {
     return total;
 }
 
-/// Time Complexity: Linear
+/// Time Complexity: Linear  - O(n)
 pub fn count_up_and_down(number: i8) -> () {
     println!("Going up!");
 
@@ -38,7 +38,7 @@ pub fn count_up_and_down(number: i8) -> () {
     println!("Back down. Bye!");
 }
 
-/// Time Complexity: Linear
+/// Time Complexity: Linear - O(n)
 pub fn while_count_up_and_down(number: i8) -> () {
     let mut i = 0;
 
@@ -59,10 +59,34 @@ pub fn while_count_up_and_down(number: i8) -> () {
     println!("Back down. Bye!");
 }
 
+// Time Complexity: Quadratic - O(n²)
 pub fn print_all_pairs(number: i8) -> () {
     for idx in 0..number {
         for idxs in 0..number {
             println!("{idx}, {idxs}");
         }
+    }
+}
+
+/**
+ * Time Complexity: The time complexity of this function is O(n),
+ * where n is the maximum of 5 and the input value. It's linear because
+ * the number of iterations directly depends on the larger of the two
+ * values. While the function looks like it may have a constant time
+ * complexity due to the 5 being ever-present, the input value can be
+ * an arbitrary value, so its runtime does scale with the input value.
+*/
+pub fn log_at_least_5(value: u8) -> () {
+    for i in 1..=u8::max(5, value) {
+        println!("{i}");
+    }
+}
+
+/// Time Complexity: The time complexity of this function is O(1),
+/// where 5 is the maximum of n and the input value. It's constant because
+/// the number of iterations directly depends on 5.
+pub fn log_at_most_5(value: u8) -> () {
+    for idx in 1..=u8::min(5, value) {
+        println!("{idx}");
     }
 }
