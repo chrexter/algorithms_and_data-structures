@@ -22,7 +22,7 @@ pub fn add_up_to(number: i32) -> i32 {
 }
 
 /// Time Complexity: Linear  - O(n)
-pub fn count_up_and_down(number: i8) -> () {
+pub fn _count_up_and_down(number: i8) -> () {
     println!("Going up!");
 
     for idx in 0..number {
@@ -39,7 +39,7 @@ pub fn count_up_and_down(number: i8) -> () {
 }
 
 /// Time Complexity: Linear - O(n)
-pub fn while_count_up_and_down(number: i8) -> () {
+pub fn _while_count_up_and_down(number: i8) -> () {
     let mut i = 0;
 
     while i < number {
@@ -60,7 +60,7 @@ pub fn while_count_up_and_down(number: i8) -> () {
 }
 
 // Time Complexity: Quadratic - O(n²)
-pub fn print_all_pairs(number: i8) -> () {
+pub fn _print_all_pairs(number: i8) -> () {
     for idx in 0..number {
         for idxs in 0..number {
             println!("{idx}, {idxs}");
@@ -76,7 +76,7 @@ pub fn print_all_pairs(number: i8) -> () {
  * complexity due to the 5 being ever-present, the input value can be
  * an arbitrary value, so its runtime does scale with the input value.
 */
-pub fn log_at_least_5(value: u8) -> () {
+pub fn _log_at_least_5(value: u8) -> () {
     for i in 1..=u8::max(5, value) {
         println!("{i}");
     }

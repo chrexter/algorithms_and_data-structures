@@ -1,6 +1,6 @@
 mod section_one;
 
-use section_one::{add_up_simplfied, add_up_to, log_at_least_5, log_at_most_5, print_all_pairs};
+use section_one::{add_up_simplfied, add_up_to, log_at_most_5};
 
 fn main() {
     let sum_up = add_up_to(100);
