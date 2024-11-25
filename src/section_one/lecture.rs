@@ -90,3 +90,25 @@ pub fn log_at_most_5(value: u8) -> () {
         println!("{idx}");
     }
 }
+
+// Space Complexity: O(1)
+pub fn sum_ups(payload: [u8; 5]) -> () {
+    let mut value: u8 = 0; // - constant space complexity
+
+    for item in payload {
+        value += item;
+    }
+
+    println!("{value}");
+}
+
+// Space Complexity: O(n)
+pub fn double_ups(payload: Vec<u8>) -> () {
+    let mut new_array: Vec<u8> = Vec::new();
+
+    for item in payload {
+        new_array.push(2 * item);
+    }
+
+    println!("{new_array:?}")
+}

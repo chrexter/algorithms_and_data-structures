@@ -1,6 +1,6 @@
 mod section_one;
 
-use section_one::{add_up_simplfied, add_up_to, log_at_most_5};
+use section_one::{add_up_simplfied, add_up_to, double_ups, log_at_most_5, sum_ups};
 
 fn main() {
     let sum_up = add_up_to(100);
@@ -16,4 +16,8 @@ fn main() {
     // log_at_least_5(0);
 
     log_at_most_5(2);
+
+    let payload: [u8; 5] = [1, 2, 3, 4, 10];
+    sum_ups(payload);
+    double_ups(Vec::from(payload));
 }
