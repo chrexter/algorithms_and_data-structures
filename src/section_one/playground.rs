@@ -112,3 +112,16 @@ pub fn double_ups(payload: Vec<u8>) -> () {
 
     println!("{new_array:?}")
 }
+
+// Convert temperatures between Fahrenheit and Celsius.
+/**
+* Business Logic:
+*  Temperature conversions use the following formulas:
+   - Temperature in degrees Fahrenheit (°F) = (Temperature in degrees Celsius (°C) * 9/5) + 32
+   - Temperature in degrees Celsius (°C) = (Temperature in degrees Fahrenheit (°F) - 32) * 5/9
+
+   Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs.
+   Attempted input of other characters into a numeric field may lead to an incorrect result.
+* */
+
+pub fn temperature_converter(temp: u32) -> () {}

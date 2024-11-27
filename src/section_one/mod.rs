@@ -1,4 +1,4 @@
 mod big_o_notation;
-mod lecture;
+mod playground;
 
-pub use lecture::*;
+pub use playground::*;
